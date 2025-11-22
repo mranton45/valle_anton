@@ -1,0 +1,87 @@
+.lugares {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.lugares h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* GRID */
+.lugares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+/* TARJETAS */
+.lugar-item {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform .2s ease;
+}
+
+.lugar-item:hover {
+  transform: scale(1.02);
+}
+
+/* IMÁGENES */
+.lugar-item .img-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.lugar-item .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* TEXTOS */
+.lugar-item h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: #34495e;
+}
+
+.lugar-item p {
+  margin: 0 15px 20px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+.lugar-datos {
+  background: #f6f6f6;
+  margin: 0 15px 18px;
+  padding: 12px 14px;
+  border-left: 4px solid #3498db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.lugar-datos strong {
+  color: #2c3e50;
+}
+
+.lugar-item .img-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.lugar-item .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,79 @@
+
+/* Barra de navegación */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #2e2d2d;
+  color: #00bcd4;
+}
+
+/* 🔹 Logo dentro del menú */
+nav ul li.logo {
+  margin-right: auto;
+  padding: 5px 10px;
+}
+
+nav ul li.logo img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+  
+  /* CSS de los containers */
+.container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 0; 
+    background-color: white; /* fondo blanco */
+    padding: 0; 
+  }
+  
+  .container > div {
+    background-color: white; 
+    padding: 10px; 
+    border: none; 
+  }
+  
+  .container > div.header {
+    grid-area: header;
+    text-align: center;
+  }
+  
+  .container > div.content {
+    grid-area: content;
+  }
+  
+  .container > div.footer {
+    grid-area: footer;
+  }
+  
+
+  
+ 

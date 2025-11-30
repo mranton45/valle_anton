@@ -27,7 +27,7 @@
   border: none;
 }
 
-
+/* BLOQUES */
 .mapas-block {
   margin-bottom: 50px;
 }
@@ -43,6 +43,11 @@
   line-height: 1.7;
 }
 
+.mapas-block ul li {
+  text-align: justify; /* ← Justificado */
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .map-container {
     height: 350px;

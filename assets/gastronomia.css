@@ -57,9 +57,10 @@
 /* Texto */
 .gast-item p {
   margin-top: 10px;
-  font-size: 0.95rem;
+  
   line-height: 1.6;
   color: #444;
+  text-align: justify !important; 
 }
 
 /* Responsive */

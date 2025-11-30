@@ -1,12 +1,17 @@
 
 
+/* ============================
+   SECCIÓN PRINCIPAL
+============================ */
 .valle-section {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* Cada bloque de contenido */
+/* ============================
+   BLOQUES DE CONTENIDO
+============================ */
 .valle-block {
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +20,9 @@
   align-items: center;
 }
 
-/* Texto */
+/* ============================
+   TEXTO
+============================ */
 .valle-text {
   flex: 1 1 450px;
 }
@@ -26,7 +33,17 @@
   margin-bottom: 15px;
 }
 
-/* Imagen */
+/* Justificar párrafos si los tienes dentro */
+.valle-text p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+
+/* ============================
+   IMAGEN
+============================ */
 .valle-image img {
   width: 100%;
   max-width: 500px;
@@ -36,14 +53,26 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* En responsive (pantallas pequeñas) */
+
+
+/* ============================
+   RESPONSIVE (pantallas pequeñas)
+============================ */
 @media (max-width: 768px) {
   .valle-block {
     flex-direction: column;
     text-align: center;
   }
 
+  .valle-text {
+    text-align: center; /* Mejora visual para móviles */
+  }
+
+  .valle-text p {
+    text-align: justify; /* Mantener párrafos justificados aun centrando títulos */
+  }
+
   .valle-image img {
-    max-width: 100%;
+    max-width: 100%; /* Totalmente responsive */
   }
 }

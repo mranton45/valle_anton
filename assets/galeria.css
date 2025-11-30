@@ -1,3 +1,6 @@
+/* ============================
+   SECCIÓN PRINCIPAL
+============================ */
 .galeria {
   background: #ffffff;
   padding: 60px 20px;
@@ -10,6 +13,11 @@
   color: #2c3e50;
 }
 
+
+
+/* ============================
+   BLOQUES DE GALERÍA
+============================ */
 .galeria-bloque {
   margin-bottom: 50px;
 }
@@ -21,27 +29,53 @@
   text-align: center;
 }
 
-/* GRID */
+
+
+/* ============================
+   GRID DE IMÁGENES Y VIDEOS
+============================ */
 .galeria-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
-/* IMÁGENES */
+
+
+/* ============================
+   IMÁGENES
+============================ */
 .galeria-item img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  display: block;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* VIDEOS */
+
+
+/* ============================
+   VIDEOS / IFRAME
+============================ */
 .galeria-item iframe,
 .galeria-item video {
   width: 100%;
   height: 220px;
   border-radius: 6px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ============================
+   RESPONSIVE EXTRA (OPCIONAL)
+============================ */
+@media (max-width: 480px) {
+  .galeria-item img,
+  .galeria-item iframe,
+  .galeria-item video {
+    height: 180px; /* Mejor visual en móviles pequeños */
+  }
 }

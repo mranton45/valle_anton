@@ -1,78 +1,159 @@
-table {
+/* ============================================================
+   TABLA PERSONALIZADA (sin conflictos con Bootstrap)
+============================================================ */
+
+.custom-table {
   width: 100%;
   border-collapse: collapse;
-  border: none;
   table-layout: fixed;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  font-family: inherit;
-  font-size: 16px;
+  background: #ffffff;
+  font-family: inherit;      /* Usa Arial del global */
+  font-size: 1.1rem;         /* Tamaño mejorado */
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Celdas generales */
-td {
-  border: 1px solid #e0e0e0;
-  padding: 15px;
+/* Celdas */
+.custom-table td {
+  border: 1px solid #e5e5e5;
+  padding: 14px;
   vertical-align: middle;
-  background-color: #ffffff;
+  text-align: justify;
+  background: #ffffff;
+  word-wrap: break-word;
 }
 
-
-td[rowspan="2"] {
-  background-color: black;
-  width: 30%;
-  padding: 0;
+/* Primera fila — títulos */
+.custom-table tr:first-child td {
+  background: #f5fafa;
+  color: #007b8a;
+  font-weight: bold;
   text-align: center;
-  vertical-align: middle;
+  font-size: 1.15rem;
 }
 
-td[rowspan="2"] img {
-  max-width: 90%;
-  max-height: 400px;
-  margin: auto;
+/* Celda de imagen vertical */
+.custom-table td[rowspan="2"] {
+  width: 32%;
+  padding: 0;
+  background: #000;
+  text-align: center;
+}
+
+.custom-table td[rowspan="2"] img {
+  max-width: 95%;
+  max-height: 380px;
   display: block;
+  margin: auto;
   object-fit: contain;
 }
 
-
-td[colspan="4"] {
-  background-color: #f9f9f9;
-  width: 70%;
+/* Texto que abarca 4 columnas */
+.custom-table td[colspan="4"] {
+  background: #f9f9f9;
 }
 
-td[colspan="4"] p {
-  text-align: justify;
+.custom-table td[colspan="4"] p {
   margin: 0;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-tr:nth-child(2) td {
-  background-color: #fefefe;
-}
-
-
-td strong {
+/* Estilo para títulos dentro de celdas */
+.custom-table td strong {
   display: block;
-  text-align: center;
   margin-bottom: 10px;
-  color: #0077b6;
-  font-size: 17px;
+  text-align: center;
+  color: #007b8a;
+  font-size: 1.15rem;
 }
 
-
-td img:not([src*="logo"]) {
-  display: block;
-  margin: 0 auto 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+/* Imágenes internas (no logo) */
+.custom-table td img:not([src*="logo"]) {
   width: auto;
-  height: 150px;
-  object-fit: cover;
   max-width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  object-fit: cover;
 }
 
-
-td ul {
-  padding-left: 18px;
-  text-align: justify;
-  margin: 10px 0 0;
-  font-size: 15px;
+/* Listas */
+.custom-table td ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #333;
 }
+
+.custom-table td ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 768px) {
+
+  .custom-table,
+  .custom-table tbody,
+  .custom-table tr,
+  .custom-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .custom-table {
+    box-shadow: none;
+    border: none;
+  }
+
+  .custom-table tr {
+    margin-bottom: 18px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .custom-table td {
+    border: none !important;
+    padding: 10px 0;
+  }
+
+  .custom-table td[rowspan="2"] {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .custom-table td[rowspan="2"] img {
+    max-height: 260px;
+  }
+
+  .custom-table td[colspan="4"] {
+    background: transparent;
+  }
+
+  .custom-table td strong {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .custom-table td {
+    font-size: 1rem;
+  }
+
+  .custom-table td img:not([src*="logo"]) {
+    height: 130px;
+  }
+
+  .custom-table td[rowspan="2"] img {
+    max-height: 220px;
+  }
+}
+
